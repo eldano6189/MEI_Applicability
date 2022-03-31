@@ -1,0 +1,21 @@
+.container {
+  grid-column: 3 / 13;
+  grid-row: 1 / 3;
+  padding-top: 15%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.item {
+  flex: 1 1;
+  border: 1px solid black;
+}
