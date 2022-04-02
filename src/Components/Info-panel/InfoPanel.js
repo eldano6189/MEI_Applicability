@@ -1,4 +1,7 @@
 import styles from "./InfoPanel.module.css";
+import { Landrover } from "../../Assets/SVG/Landrover";
+import { MAN } from "../../Assets/SVG/Man";
+import { TRL } from "../../Assets/SVG/Trl";
 import { useContext } from "react";
 import VehData from "../../Context/Context";
 
@@ -13,24 +16,13 @@ export const InfoPanel = () => {
           <p className={`${styles.info} sub-header`}>{veh.info.vrn}</p>
           <div className={styles.containerVehLogo}>
             <div className={styles.vehLogo}>
-              <div className={styles.wrapper}>
-                {veh.info.type === "LANDROVER" ? (
-                  <img
-                    src={require("../../Assets/Images/LR.png")}
-                    alt={veh.info.type}
-                  />
-                ) : veh.info.type === "MAN" ? (
-                  <img
-                    src={require("../../Assets/Images/MAN.png")}
-                    alt={veh.info.type}
-                  />
-                ) : veh.info.type === "TRL" ? (
-                  <img
-                    src={require("../../Assets/Images/MAN.png")}
-                    alt={veh.info.type}
-                  />
-                ) : null}
-              </div>
+              {veh.info.type === "LANDROVER" ? (
+                <Landrover />
+              ) : veh.info.type === "MAN" ? (
+                <MAN />
+              ) : veh.info.type === "TRL" ? (
+                <TRL />
+              ) : null}
             </div>
           </div>
         </div>

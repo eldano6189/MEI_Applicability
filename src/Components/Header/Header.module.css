@@ -45,4 +45,17 @@ header > div {
   padding: 0.75em;
   background: hsl(var(--bc1));
   box-shadow: var(--shadow);
+  color: hsl(var(--fc1));
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+
+  .containerLogo,
+  .containerSearch {
+    justify-content: flex-start;
+    padding: 0.5em 0;
+  }
 }

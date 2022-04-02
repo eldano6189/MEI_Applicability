@@ -1,11 +1,14 @@
 .container {
   width: 100%;
   display: flex;
+  overflow-x: auto;
 }
 
 .item {
   position: relative;
+  min-height: 120px;
   width: 100%;
+  min-width: 130px;
   padding-top: 12%;
   margin: 0.5em;
   background: hsl(var(--bc1));
@@ -30,7 +33,7 @@
 }
 
 .info {
-  color: hsl(var(--fc1));
+  color: hsl(var(--fc2));
   padding-bottom: 0.5em;
 }
 
@@ -43,11 +46,14 @@
 .vehLogo {
   position: relative;
   width: 60%;
+  min-width: 50px;
   padding-top: 60%;
 }
 
-.wrapper img {
+.wrapper svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

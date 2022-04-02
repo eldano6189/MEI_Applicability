@@ -2,6 +2,7 @@ import styles from "./QuickView.module.css";
 import { useContext } from "react";
 import VehData from "../../Context/Context";
 import { Landrover } from "../../Data/932/Landrover";
+import { All } from "../../Data/933/All";
 
 export const QuickView = () => {
   const { veh } = useContext(VehData);
@@ -21,6 +22,7 @@ export const QuickView = () => {
             })
           : null}
       </ul>
+
       <ul className={styles.reference}>
         {veh.info.type === "LANDROVER"
           ? veh.mot.map((vehicle, index) => {
@@ -31,8 +33,10 @@ export const QuickView = () => {
                     style={{
                       color:
                         vehicle === "y" || vehicle === "ex"
-                          ? "hsl(var(--fc1))"
+                          ? "hsl(var(--fc2))"
                           : "hsl(var(--fc1), 20%)",
+                      fontWeight:
+                        vehicle === "y" || vehicle === "ex" ? "700" : "400",
                     }}
                   >
                     {vehicle}
@@ -42,10 +46,11 @@ export const QuickView = () => {
             })
           : null}
       </ul>
+
       <p className=" header">933</p>
       <ul className={styles.reference}>
-        {veh.info.type === "LANDROVER"
-          ? Landrover.map((vehicle, index) => {
+        {veh.info.type !== ""
+          ? All.map((vehicle, index) => {
               return (
                 <li key={index}>
                   <p className="paragraph">{vehicle.im}</p>
@@ -54,12 +59,25 @@ export const QuickView = () => {
             })
           : null}
       </ul>
+
       <ul className={styles.reference}>
         {veh.info.type === "LANDROVER"
-          ? Landrover.map((vehicle, index) => {
+          ? veh.operational.map((vehicle, index) => {
               return (
                 <li key={index}>
-                  <p className="paragraph">{vehicle.im}</p>
+                  <p
+                    className="paragraph"
+                    style={{
+                      color:
+                        vehicle === "y" || vehicle === "ex"
+                          ? "hsl(var(--fc2))"
+                          : "hsl(var(--fc1), 20%)",
+                      fontWeight:
+                        vehicle === "y" || vehicle === "ex" ? "700" : "400",
+                    }}
+                  >
+                    {vehicle}
+                  </p>
                 </li>
               );
             })

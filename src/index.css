@@ -16,12 +16,13 @@ html {
 }
 
 :root {
-  --bc1: 0, 0%, 93%;
-  --fc1: 0, 0%, 0%;
-  --shadow1: 0, 0%, 76%;
-  --shadow2: 0, 0%, 100%;
-  --shadow: 15px 15px 35px hsl(var(--shadow1)),
-    -15px -15px 35px hsl(var(--shadow2));
+  --bc1: 230, 14%, 9%;
+  --fc1: 0, 0%, 80%;
+  --fc2: 100, 41%, 41%;
+  --shadow1: 0, 0%, 0%, 0.5;
+  --shadow2: 0, 0%, 100%, 0.025;
+  --shadow: 6px 6px 16px 0 hsl(var(--shadow1)),
+    -6px -6px 16px 0 hsl(var(--shadow2));
 }
 
 li,
@@ -31,6 +32,19 @@ a {
   color: inherit;
 }
 
+/* width */
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(var(--bc1));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--fc2));
+  border-radius: 20px;
 }

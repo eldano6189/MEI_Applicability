@@ -2,7 +2,7 @@ import styles from "./DetailedView.module.css";
 import { useContext } from "react";
 import VehData from "../../Context/Context";
 import { Landrover } from "../../Data/932/Landrover";
-import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
+import { All } from "../../Data/933/All";
 
 export const DetailedView = () => {
   const { veh } = useContext(VehData);
@@ -36,7 +36,7 @@ export const DetailedView = () => {
                         style={{
                           color:
                             vehicle === "y" || vehicle === "ex"
-                              ? "hsl(var(--fc1))"
+                              ? "hsl(var(--fc2))"
                               : "hsl(var(--fc1), 20%)",
                         }}
                       >
@@ -68,8 +68,8 @@ export const DetailedView = () => {
         </div>
         <div className={styles.wrapper}>
           <ul className={styles.number}>
-            {veh.info.type === "LANDROVER"
-              ? Landrover.map((vehicle, index) => {
+            {veh.info.type !== ""
+              ? All.map((vehicle, index) => {
                   return (
                     <li key={index}>
                       <p className="sub-header">{vehicle.im}</p>
@@ -80,11 +80,21 @@ export const DetailedView = () => {
           </ul>
 
           <ul className={styles.applicable}>
-            {veh.info.type === "LANDROVER"
-              ? Landrover.map((vehicle, index) => {
+            {veh.info.type !== ""
+              ? veh.operational.map((vehicle, index) => {
                   return (
                     <li key={index}>
-                      <p className="sub-header">{vehicle.im}</p>
+                      <p
+                        className="sub-header"
+                        style={{
+                          color:
+                            vehicle === "y" || vehicle === "ex"
+                              ? "hsl(var(--fc2))"
+                              : "hsl(var(--fc1), 20%)",
+                        }}
+                      >
+                        {vehicle}
+                      </p>
                     </li>
                   );
                 })
@@ -92,8 +102,8 @@ export const DetailedView = () => {
           </ul>
 
           <ul className={styles.description}>
-            {veh.info.type === "LANDROVER"
-              ? Landrover.map((vehicle, index) => {
+            {veh.info.type !== ""
+              ? All.map((vehicle, index) => {
                   return (
                     <li key={index}>
                       <p className="sub-header">{vehicle.desc}</p>
