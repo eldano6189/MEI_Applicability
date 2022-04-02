@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+
+  border-radius: 1rem;
+  display: flex;
+  padding: 1em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+
+.content > * {
+  padding-bottom: 1rem;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper li {
+  margin: 0.5em 0;
+  padding: 1em;
+  background-color: hsl(var(--bc1));
+  box-shadow: var(--shadow);
+  border-radius: 0.2em;
+}
+
+.number p {
+  text-align: center;
+}
+
+.applicable p {
+  text-transform: uppercase;
+  text-align: center;
+}

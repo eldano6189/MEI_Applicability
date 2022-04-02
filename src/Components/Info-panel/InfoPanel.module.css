@@ -1,9 +1,16 @@
 .container {
-  grid-column: 3 / 13;
-  grid-row: 1 / 3;
-  padding-top: 15%;
-  border: 1px solid black;
+  width: 100%;
+  display: flex;
+}
+
+.item {
   position: relative;
+  width: 100%;
+  padding-top: 12%;
+  margin: 0.5em;
+  background: hsl(var(--bc1));
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
 }
 
 .wrapper {
@@ -13,9 +20,34 @@
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
 
-.item {
-  flex: 1 1;
-  border: 1px solid black;
+.label {
+  color: hsl(var(--fc1), 75%);
+  padding-bottom: 0.5em;
+}
+
+.info {
+  color: hsl(var(--fc1));
+  padding-bottom: 0.5em;
+}
+
+.containerVehLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.vehLogo {
+  position: relative;
+  width: 60%;
+  padding-top: 60%;
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

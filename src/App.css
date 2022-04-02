@@ -1,9 +1,25 @@
 .App {
-  padding-right: 1vw;
+  padding: 1vw;
   width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 1vw;
+  min-height: 100vh;
+  background-color: hsl(var(--bc1));
+}
+
+.App > * {
+  margin-bottom: 1rem;
+}
+
+.header {
+  font-weight: 700;
+  font-size: max(1rem, 1vw);
+}
+
+.sub-header {
+  font-weight: 700;
+  font-size: max(0.6rem, 0.8vw);
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: max(0.6rem, 0.6vw);
 }

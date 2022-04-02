@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -12,4 +13,24 @@ body {
 }
 html {
   height: -webkit-fill-available;
+}
+
+:root {
+  --bc1: 0, 0%, 93%;
+  --fc1: 0, 0%, 0%;
+  --shadow1: 0, 0%, 76%;
+  --shadow2: 0, 0%, 100%;
+  --shadow: 15px 15px 35px hsl(var(--shadow1)),
+    -15px -15px 35px hsl(var(--shadow2));
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }

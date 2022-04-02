@@ -9,7 +9,7 @@ export const VehContext = ({ children }) => {
 
   useEffect(() => {
     Vehicles.filter((vehicle) => {
-      return vehicle.info.vrn === search
+      return vehicle.info.vrn === search.toUpperCase()
         ? setVeh(vehicle)
         : setVeh(Vehicles[0]);
     });
