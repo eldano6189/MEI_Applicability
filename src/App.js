@@ -12,6 +12,7 @@ Amplify.configure(awsmobile);
 
 function App() {
   const { loggedIn } = useContext(VehData);
+  console.log(loggedIn);
 
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         {loggedIn ? (
           <>
             <Route exact path="/" element={<MainPage />} />
+            <Route exact path="/admin" element={<MainPage />} />
           </>
         ) : (
           <Route path="*" element={<Navigate replace to="/login" />} />
