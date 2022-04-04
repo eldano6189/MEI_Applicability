@@ -28,7 +28,7 @@
 }
 
 .label {
-  color: hsl(var(--fc1), 75%);
+  color: hsl(var(--fc1));
   padding-bottom: 0.5em;
 }
 

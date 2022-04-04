@@ -1,27 +1,51 @@
 import { createContext, useEffect, useState } from "react";
 import { Vehicles } from "../Data/Vehicles";
+import { Auth } from "aws-amplify";
 
-const VehData = createContext();
+const Data = createContext();
 
-export const VehContext = ({ children }) => {
+export const DataContext = ({ children }) => {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [search, setSearch] = useState("");
+  const [found, setFound] = useState(false);
   const [veh, setVeh] = useState(Vehicles[0]);
+
+  const loggedInState = () => {
+    Auth.currentAuthenticatedUser()
+      .then(() => {
+        setLoggedIn(true);
+      })
+      .catch(() => {
+        setLoggedIn(false);
+      });
+  };
+
+  useEffect(() => {
+    loggedInState();
+  }, []);
 
   useEffect(() => {
     Vehicles.filter((vehicle) => {
       return vehicle.info.vrn === search.toUpperCase()
-        ? setVeh(vehicle)
-        : setVeh(Vehicles[0]);
+        ? (setVeh(vehicle), setFound(true))
+        : (setVeh(Vehicles[0]), setFound(false));
     });
   }, [search]);
 
-  console.log(search);
-  console.log(veh);
   return (
-    <VehData.Provider value={{ search, setSearch, veh }}>
+    <Data.Provider
+      value={{
+        search,
+        setSearch,
+        veh,
+        found,
+        loggedIn,
+        setLoggedIn,
+      }}
+    >
       {children}
-    </VehData.Provider>
+    </Data.Provider>
   );
 };
 
-export default VehData;
+export default Data;

@@ -1,9 +1,10 @@
 import styles from "./Header.module.css";
 import { useContext } from "react";
-import VehData from "../../Context/Context";
+import Data from "../../Context/Context";
+import { SignOut } from "../Sign-out/SignOut";
 
 export const Header = () => {
-  const { setSearch } = useContext(VehData);
+  const { setSearch, loggedIn } = useContext(Data);
 
   return (
     <header>
@@ -14,13 +15,18 @@ export const Header = () => {
         <h4 className="header">1MI Bn, Inspection Applicability</h4>
       </div>
       <div className={styles.containerSearch}>
-        <input
-          type="text"
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-          placeholder="Search vehicle"
-        />
+        {loggedIn ? (
+          <>
+            <SignOut />
+            <input
+              onKeyDown={(e) =>
+                e.key === "Enter" ? setSearch(e.target.value) : null
+              }
+              type="text"
+              placeholder="Search vehicle"
+            />
+          </>
+        ) : null}
       </div>
     </header>
   );

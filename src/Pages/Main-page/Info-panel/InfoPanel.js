@@ -1,12 +1,12 @@
 import styles from "./InfoPanel.module.css";
-import { Landrover } from "../../Assets/SVG/Landrover";
-import { MAN } from "../../Assets/SVG/Man";
-import { TRL } from "../../Assets/SVG/Trl";
+import { Landrover } from "../../../Assets/SVG/Landrover";
+import { MAN } from "../../../Assets/SVG/Man";
+import { TRL } from "../../../Assets/SVG/Trl";
 import { useContext } from "react";
-import VehData from "../../Context/Context";
+import Data from "../../../Context/Context";
 
 export const InfoPanel = () => {
-  const { veh } = useContext(VehData);
+  const { veh } = useContext(Data);
 
   return (
     <div className={styles.container}>

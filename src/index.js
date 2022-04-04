@@ -1,14 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { VehContext } from "./Context/Context";
+import { DataContext } from "./Context/Context";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
-    <VehContext>
-      <App />
-    </VehContext>
-  </React.StrictMode>,
-  document.getElementById("root")
+    <DataContext>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </DataContext>
+  </React.StrictMode>
 );

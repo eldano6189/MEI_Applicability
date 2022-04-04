@@ -1,11 +1,11 @@
 import styles from "./DetailedView.module.css";
 import { useContext } from "react";
-import VehData from "../../Context/Context";
-import { Landrover } from "../../Data/932/Landrover";
-import { All } from "../../Data/933/All";
+import Data from "../../../Context/Context";
+import { Landrover } from "../../../Data/932/Landrover";
+import { All } from "../../../Data/933/All";
 
 export const DetailedView = () => {
-  const { veh } = useContext(VehData);
+  const { veh } = useContext(Data);
 
   return (
     <div className={styles.container}>
@@ -30,18 +30,16 @@ export const DetailedView = () => {
             {veh.info.type === "LANDROVER"
               ? veh.mot.map((vehicle, index) => {
                   return (
-                    <li key={index}>
-                      <p
-                        className="sub-header"
-                        style={{
-                          color:
-                            vehicle === "y" || vehicle === "ex"
-                              ? "hsl(var(--fc2))"
-                              : "hsl(var(--fc1), 20%)",
-                        }}
-                      >
-                        {vehicle}
-                      </p>
+                    <li
+                      key={index}
+                      style={{
+                        backgroundColor:
+                          vehicle === "y" || vehicle === "ex"
+                            ? "hsl(var(--fc2))"
+                            : null,
+                      }}
+                    >
+                      <p className="sub-header">{vehicle}</p>
                     </li>
                   );
                 })
@@ -83,18 +81,16 @@ export const DetailedView = () => {
             {veh.info.type !== ""
               ? veh.operational.map((vehicle, index) => {
                   return (
-                    <li key={index}>
-                      <p
-                        className="sub-header"
-                        style={{
-                          color:
-                            vehicle === "y" || vehicle === "ex"
-                              ? "hsl(var(--fc2))"
-                              : "hsl(var(--fc1), 20%)",
-                        }}
-                      >
-                        {vehicle}
-                      </p>
+                    <li
+                      key={index}
+                      style={{
+                        backgroundColor:
+                          vehicle === "y" || vehicle === "ex"
+                            ? "hsl(var(--fc2))"
+                            : null,
+                      }}
+                    >
+                      <p className="sub-header">{vehicle}</p>
                     </li>
                   );
                 })
