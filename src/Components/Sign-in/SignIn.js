@@ -6,7 +6,7 @@ import styles from "./SignIn.module.css";
 import Data from "../../Context/Context";
 
 export const SignIn = () => {
-  const { setLoggedIn } = useContext(Data);
+  const { setLoggedIn, setUser } = useContext(Data);
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
@@ -18,6 +18,7 @@ export const SignIn = () => {
       await Auth.signIn(username, password);
       setLoggedIn(true);
       navigate("/");
+      setUser(username);
     } catch (error) {
       console.log("error signing in", error);
       setLoginMessage("Incorrect username or password");

@@ -1,27 +1,6 @@
 export const Vehicles = [
   {
     info: {
-      type: "",
-      vrn: "",
-      ac: "",
-      engine: "",
-      chassis: "",
-      nsn: "",
-      aesp: "",
-      dtp: "",
-      rpc: "",
-      desc: "",
-      class: "",
-    },
-    weights: {
-      dgvw: "",
-      ulw: "",
-    },
-    mot: [""],
-    933: [""],
-  },
-  {
-    info: {
       type: "LANDROVER",
       vrn: "LY76AA",
       ac: "NB50103101",
