@@ -1,4 +1,6 @@
 import styles from "./QuickView.module.css";
+
+import { PDF932, PDF933 } from "../../../Components/PDF-printout/PDFPrintout";
 import { Landrover } from "../../../Data/932/Landrover";
 import { AllOthers } from "../../../Data/932/AllOthers";
 import { All } from "../../../Data/933/All";
@@ -6,10 +8,15 @@ import { All } from "../../../Data/933/All";
 export const QuickView = ({ data }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.inspectionSheets}>
+        <p className="header">Inspection sheets:</p>
+        <PDF932 data={data} />
+        <PDF933 data={data} />
+      </div>
       <p className="header">Quick view</p>
       <p className="header">932</p>
       <ul className={styles.reference}>
-        {data.info.type === "LANDROVER"
+        {data.type === "LANDROVER"
           ? Landrover.map((vehicle, index) => {
               return (
                 <li key={index}>
@@ -33,8 +40,10 @@ export const QuickView = ({ data }) => {
               key={index}
               style={{
                 backgroundColor:
-                  vehicle === "y" || vehicle === "ex"
+                  vehicle === "Y"
                     ? "hsl(var(--fc2))"
+                    : vehicle === "EX"
+                    ? "hsl(var(--fc2),50%)"
                     : null,
               }}
             >
@@ -62,8 +71,10 @@ export const QuickView = ({ data }) => {
               key={index}
               style={{
                 backgroundColor:
-                  vehicle === "y" || vehicle === "ex"
+                  vehicle === "Y"
                     ? "hsl(var(--fc2))"
+                    : vehicle === "EX"
+                    ? "hsl(var(--fc2),50%)"
                     : null,
               }}
             >

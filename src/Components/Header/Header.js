@@ -1,13 +1,14 @@
 import styles from "./Header.module.css";
+
 import { useContext } from "react";
+import { useLocation, Link } from "react-router-dom";
+
 import Data from "../../Context/Context";
 import { SignOut } from "../Sign-out/SignOut";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 export const Header = () => {
   const location = useLocation();
-  const { loggedIn } = useContext(Data);
+  const { loggedIn, user } = useContext(Data);
 
   return (
     <header>
@@ -20,10 +21,10 @@ export const Header = () => {
       <div className={styles.containerSearch}>
         {location.pathname === "/" || location.pathname === "/login" ? null : (
           <Link to="/">
-            <button className="button">Home</button>
+            <button className="button">Back</button>
           </Link>
         )}
-
+        {loggedIn ? <p className="paragraph">Logged in as : {user}</p> : null}
         {loggedIn ? <SignOut /> : null}
       </div>
     </header>
