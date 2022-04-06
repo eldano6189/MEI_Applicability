@@ -13,9 +13,14 @@ export const Header = () => {
   return (
     <header>
       <div className={styles.containerLogo}>
-        <div className={styles.logo}>
-          <img src={require("../../Assets/Images/REME.png")} alt="Cap Badge" />
-        </div>
+        <Link to="/">
+          <div className={styles.logo}>
+            <img
+              src={require("../../Assets/Images/REME.png")}
+              alt="Cap Badge"
+            />
+          </div>
+        </Link>
         <h4 className="header">1MI Bn, Inspection Applicability</h4>
       </div>
       <div className={styles.containerSearch}>

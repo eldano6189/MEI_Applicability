@@ -21,14 +21,14 @@
   margin: 1em;
   background: hsl(var(--bc1));
   box-shadow: var(--shadow);
+  border: 1px solid transparent;
   border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 2px 2px 16px 0 hsl(var(--shadow1)),
-    -2px -2px 16px 0 hsl(var(--shadow2));
+  border: 1px solid hsl(var(--fc2));
+  border-radius: 0;
 }
 
 .wrapper {
