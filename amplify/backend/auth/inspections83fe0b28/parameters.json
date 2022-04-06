@@ -1,13 +1,13 @@
 {
   "authSelections": "userPoolOnly",
-  "resourceName": "inspectionsf59dc21a",
+  "resourceName": "inspections83fe0b28",
   "serviceType": "imported",
   "region": "eu-west-2",
   "aliasAttributes": [
-    "email",
     "preferred_username"
   ],
   "requiredAttributes": [
+    "name",
     "email"
   ],
   "passwordPolicyMinLength": 8,
@@ -18,8 +18,5 @@
     "Requires Symbols"
   ],
   "mfaConfiguration": "OFF",
-  "autoVerifiedAttributes": [
-    "email"
-  ],
   "mfaTypes": []
 }

@@ -30,11 +30,7 @@ export const SignIn = () => {
       <div className={styles.form}>
         <h2 className="sub-header">{loginMessage}</h2>
         <p className="paragraph">Username</p>
-        <input
-          type="text"
-          onKeyDown={(e) => (e.key === "Enter" ? signIn() : null)}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <p className="paragraph">Password</p>
         <input
           type="password"
