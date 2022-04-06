@@ -22,9 +22,10 @@ html {
   --svg: 216, 18%, 5%;
   --shadow1: 217, 10%, 17%;
   --shadow2: 217, 10%, 13%;
-  --shadow: 6px 6px 16px 0 hsl(var(--shadow1)),
+  --shadow: 6px 6px 16px 0 hsl(var(--shadow2)),
+    -6px -6px 16px 0 hsl(var(--shadow1));
+  --shadow-hover: 6px 6px 16px 0 hsl(var(--shadow1)),
     -6px -6px 16px 0 hsl(var(--shadow2));
-  --test: hsl(145, 61%, 45%);
 }
 
 li,

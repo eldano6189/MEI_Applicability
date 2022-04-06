@@ -27,8 +27,8 @@
 }
 
 .card:hover {
-  border: 1px solid hsl(var(--fc2));
-  border-radius: 0;
+  box-shadow: var(--shadow-hover);
+  transform: scale(0.96);
 }
 
 .wrapper {
@@ -52,6 +52,11 @@
   padding-bottom: 0.5em;
 }
 
+.infoText {
+  position: absolute;
+  z-index: 1;
+}
+
 .imageContainer {
   flex: 1 1;
   display: flex;
@@ -60,6 +65,17 @@
 }
 
 .wrapper svg {
-  width: 70%;
+  width: 60%;
   height: auto;
+}
+
+.searchbox {
+  text-transform: uppercase;
+  border: none;
+  font-size: max(0.6rem, 0.8vw);
+  color: hsl(var(--fc2));
+  padding: 0.5em 1.5em;
+  border-radius: 2em;
+  background-color: hsl(var(--bc1));
+  box-shadow: var(--shadow-hover);
 }

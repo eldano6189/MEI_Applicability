@@ -32,7 +32,6 @@
 
 .button {
   cursor: pointer;
-  border: none;
   margin: 1em;
   font-size: max(0.6rem, 0.8vw);
   color: hsl(var(--fc2));
@@ -45,6 +44,6 @@
 }
 
 .button:hover {
-  border: 1px solid hsl(var(--fc2));
-  border-radius: 0;
+  box-shadow: var(--shadow-hover);
+  transform: scale(0.96);
 }
