@@ -33,6 +33,8 @@ export const InfoPanel = ({ data }) => {
           <p className={`${styles.info} sub-header`}>{data.nsn}</p>
           <p className={`${styles.label} paragraph`}>Description:</p>
           <p className={`${styles.info} sub-header`}>{data.desc}</p>
+          <p className={`${styles.label} paragraph`}>Extra Info:</p>
+          <p className={`${styles.info} sub-header`}>{data.info}</p>
         </div>
       </div>
       <div className={styles.item}>

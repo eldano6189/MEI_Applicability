@@ -15,17 +15,6 @@ html {
   height: -webkit-fill-available;
 }
 
-/* :root {
-  --bc1: 230, 14%, 9%;
-  --fc1: 0, 0%, 75%;
-  --fc2: 117, 100%, 30%;
-  --svg: 0, 0%, 0%;
-  --shadow1: 0, 0%, 0%, 0.5;
-  --shadow2: 0, 0%, 100%, 0.025;
-  --shadow: 6px 6px 16px 0 hsl(var(--shadow1)),
-    -6px -6px 16px 0 hsl(var(--shadow2));
-} */
-
 :root {
   --bc1: 217, 10%, 15%;
   --fc1: 0, 0%, 93%;
