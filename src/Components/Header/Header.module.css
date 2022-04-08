@@ -24,18 +24,24 @@ header > div {
   border-radius: 50%;
   background: hsl(var(--bc1));
   box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.logo svg {
+  width: 90%;
+  height: 90%;
 }
 
-.containerSearch {
+.containerInfo {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.containerInfo span {
+  padding: 0 0.5em;
 }
 
 .containerSearch input {

@@ -26,6 +26,7 @@ html {
     -6px -6px 16px 0 hsl(var(--shadow1));
   --shadow-hover: 6px 6px 16px 0 hsl(var(--shadow1)),
     -6px -6px 16px 0 hsl(var(--shadow2));
+  --test: hsl(143, 38%, 30%);
 }
 
 li,
@@ -39,18 +40,15 @@ svg {
   filter: drop-shadow(5px 5px 4px hsl(var(--svg), 50%));
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: hsl(var(--bc1));
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--fc2));
   border-radius: 20px;
