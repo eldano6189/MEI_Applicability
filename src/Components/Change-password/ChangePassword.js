@@ -31,8 +31,9 @@ export const ChangePassword = () => {
       <p className="paragraph">
         Your password will only require changing on inital login of the account.
         <br />
-        Your password can be any combination of digits and numbers you wish,
-        however you will only be able to confirm the password if they match.
+        Your password can be any combination of digits and numbers you wish but
+        at least 6 digits long, however you will only be able to confirm the
+        password if they match.
       </p>
       <div className={styles.form}>
         <p className="paragraph">New Password</p>

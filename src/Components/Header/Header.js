@@ -32,9 +32,7 @@ export const Header = () => {
           </Link>
         )}
         {loggedIn ? (
-          <p className="paragraph">
-            Logged in as : {`${user.username} ${user.attributes.name}`}
-          </p>
+          <p className="paragraph">Logged in as : {user.username}</p>
         ) : null}
         {loggedIn ? <SignOut /> : null}
       </div>

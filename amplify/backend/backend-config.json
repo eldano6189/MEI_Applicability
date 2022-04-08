@@ -1,6 +1,6 @@
 {
   "auth": {
-    "inspections060ef1a2": {
+    "inspections5afdf791": {
       "service": "Cognito",
       "serviceType": "imported",
       "providerPlugin": "awscloudformation",

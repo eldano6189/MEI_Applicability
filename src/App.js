@@ -25,7 +25,6 @@ function App() {
       <Header />
       <ScrollTop>
         <Routes>
-          {!loggedIn && <Route exact path="/login" element={<LoginPage />} />}
           {loggedIn && (
             <>
               <Route exact path="/" element={<FleetPage />} />
@@ -46,6 +45,7 @@ function App() {
               })}
             </>
           )}
+          {!loggedIn && <Route exact path="/login" element={<LoginPage />} />}
           <Route
             path="*"
             element={<Navigate replace to={loggedIn ? "/" : "/login"} />}
