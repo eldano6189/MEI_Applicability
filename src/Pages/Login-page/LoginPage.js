@@ -1,6 +1,6 @@
 import styles from "./LoginPage.module.css";
 
-import { SignIn } from "../../Components/Sign-in/SignIn";
+import { Login } from "../../Components/Login/Login";
 
 export const LoginPage = () => {
   return (
@@ -9,7 +9,7 @@ export const LoginPage = () => {
       <div className={styles.logo}>
         <img src={require("../../Assets/Images/REME.png")} alt="Cap Badge" />
       </div>
-      <SignIn />
+      <Login />
     </div>
   );
 };

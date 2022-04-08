@@ -10,9 +10,10 @@ import awsmobile from "./aws-exports";
 
 import { Header } from "./Components/Header/Header";
 import { ScrollTop } from "./Components/Scroll-top/ScrollTop";
-import { LoginPage } from "./Pages/Login-page/LoginPage";
 import { VehiclePage } from "./Pages/Vehicle-page/VehiclePage";
 import { FleetPage } from "./Pages/Fleet-page/FleetPage";
+import { ChangePassword } from "./Components/Change-password/ChangePassword";
+import { LoginPage } from "./Pages/Login-page/LoginPage";
 
 Amplify.configure(awsmobile);
 
@@ -24,10 +25,15 @@ function App() {
       <Header />
       <ScrollTop>
         <Routes>
-          <Route exact path="/login" element={<LoginPage />} />
-          {loggedIn ? (
+          {!loggedIn && <Route exact path="/login" element={<LoginPage />} />}
+          {loggedIn && (
             <>
               <Route exact path="/" element={<FleetPage />} />
+              <Route
+                exact
+                path="/changepassword"
+                element={<ChangePassword />}
+              />
               {Vehicles.map((vehicle, index) => {
                 return (
                   <Route
@@ -39,9 +45,11 @@ function App() {
                 );
               })}
             </>
-          ) : (
-            <Route path="*" element={<Navigate replace to="/login" />} />
           )}
+          <Route
+            path="*"
+            element={<Navigate replace to={loggedIn ? "/" : "/login"} />}
+          />
         </Routes>
       </ScrollTop>
     </div>

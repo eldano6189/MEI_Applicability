@@ -41,6 +41,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.infoText {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.25;
 }
 
 .vehLogo {

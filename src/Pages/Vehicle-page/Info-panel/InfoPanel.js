@@ -13,6 +13,7 @@ export const InfoPanel = ({ data }) => {
           <p className={`${styles.label} paragraph`}>VRN:</p>
           <p className={`${styles.info} sub-header`}>{data.vrn}</p>
           <div className={styles.containerVehLogo}>
+            <p className={`${styles.infoText} paragraph`}>{data.info}</p>
             <div className={styles.vehLogo}>
               {data.type === "LANDROVER" ? (
                 <Landrover />

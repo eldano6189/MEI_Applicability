@@ -2,43 +2,43 @@ import { useState, useContext } from "react";
 import { Auth } from "aws-amplify";
 import { useNavigate } from "react-router-dom";
 
-import styles from "./SignIn.module.css";
+import styles from "./Login.module.css";
 import Data from "../../Context/Context";
 
-export const SignIn = () => {
+export const Login = () => {
   const { setLoggedIn, setUser } = useContext(Data);
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [loginMessage, setLoginMessage] = useState("");
 
-  const signIn = async () => {
-    try {
-      await Auth.signIn(username, password);
-      setLoggedIn(true);
-      navigate("/");
-      setUser(username);
-    } catch (error) {
-      console.log("error signing in", error);
-      setLoginMessage("Incorrect username or password");
-    }
+  const login = async () => {
+    await Auth.signIn(username, password).then((user) => {
+      if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
+        setLoggedIn(true);
+        setUser(user);
+        navigate("/changepassword");
+      } else {
+        setLoggedIn(true);
+        setUser(user);
+        navigate("/");
+      }
+    });
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.form}>
-        <h2 className="sub-header">{loginMessage}</h2>
         <p className="paragraph">Username</p>
         <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <p className="paragraph">Password</p>
         <input
           type="password"
-          onKeyDown={(e) => (e.key === "Enter" ? signIn() : null)}
+          onKeyDown={(e) => (e.key === "Enter" ? login() : null)}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="button" onClick={signIn}>
-          Sign In
+        <button className="button" onClick={login}>
+          Login
         </button>
       </div>
     </div>

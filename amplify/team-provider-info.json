@@ -13,11 +13,11 @@
     },
     "categories": {
       "auth": {
-        "inspections83fe0b28": {
-          "userPoolId": "eu-west-2_GoEqScqxF",
-          "userPoolName": "inspections",
-          "webClientId": "k45v5lm0foopu4u4e7vpru10r",
-          "nativeClientId": "k45v5lm0foopu4u4e7vpru10r"
+        "inspections060ef1a2": {
+          "userPoolId": "eu-west-2_5qv1gl7pF",
+          "userPoolName": "1MI_Inspections",
+          "webClientId": "2m991e4sbldoh96e1cblo3ioq0",
+          "nativeClientId": "2m991e4sbldoh96e1cblo3ioq0"
         }
       }
     }

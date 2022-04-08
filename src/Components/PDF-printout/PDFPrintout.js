@@ -38,7 +38,7 @@ export const PDF932 = ({ data }) => {
       <table id="table-932">
         <thead>
           <tr>
-            <th colSpan="3">INSPECTOR: {user}</th>
+            <th colSpan="3">INSPECTOR: {user.attributes.name}</th>
             <th colSpan="1">932 Inspection Sheet</th>
           </tr>
           <tr>
@@ -125,7 +125,7 @@ export const PDF933 = ({ data }) => {
       <table id="table-933">
         <thead>
           <tr>
-            <th colSpan="3">INSPECTOR: {user}</th>
+            <th colSpan="3">INSPECTOR: {user.attributes.name}</th>
             <th colSpan="1">933 Inspection Sheet</th>
           </tr>
           <tr>

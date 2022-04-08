@@ -16,7 +16,7 @@ export const FleetPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className="header">Welcome {user}</h1>
+      <h1 className="header">Welcome {user.attributes.name}</h1>
       <p className="sub-header">
         Select a vehicle from the list and you
         <br />

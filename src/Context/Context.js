@@ -7,18 +7,15 @@ export const DataContext = ({ children }) => {
   const [user, setUser] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const loggedInState = () => {
-    Auth.currentAuthenticatedUser()
-      .then(() => {
-        setLoggedIn(true);
-      })
-      .catch(() => {
-        setLoggedIn(false);
-      });
-  };
-
   useEffect(() => {
-    loggedInState();
+    const fetchUser = async () => {
+      const session = await Auth.currentSession();
+      setLoggedIn(true);
+      console.log(session);
+      const user = await Auth.currentAuthenticatedUser();
+      setUser(user);
+    };
+    fetchUser();
   }, []);
 
   return (
