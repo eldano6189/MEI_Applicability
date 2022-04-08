@@ -9,10 +9,12 @@ export const DataContext = ({ children }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      await Auth.currentSession();
-      const user = await Auth.currentAuthenticatedUser();
-      setLoggedIn(true);
-      setUser(user);
+      try {
+        await Auth.currentSession();
+        const user = await Auth.currentAuthenticatedUser();
+        setLoggedIn(true);
+        setUser(user);
+      } catch (err) {}
     };
     fetchUser();
   }, []);
