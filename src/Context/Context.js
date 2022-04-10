@@ -6,7 +6,9 @@ const Data = createContext();
 export const DataContext = ({ children }) => {
   const [user, setUser] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") === "true" ? true : false
+  );
 
   useEffect(() => {
     const fetchUser = async () => {

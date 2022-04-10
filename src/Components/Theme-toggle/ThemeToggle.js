@@ -1,10 +1,14 @@
 import styles from "./ThemeToggle.module.css";
 import Data from "../../Context/Context";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useContext(Data);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleHandler = () => {
     setTheme(!theme);
