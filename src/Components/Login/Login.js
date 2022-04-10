@@ -11,31 +11,48 @@ export const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showError, setShowError] = useState(false);
 
   const login = async () => {
-    await Auth.signIn(username, password).then((user) => {
-      if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
-        setLoggedIn(true);
-        setUser(user);
-        navigate("/changepassword");
-      } else {
-        setLoggedIn(true);
-        setUser(user);
-        navigate("/");
-      }
-    });
+    await Auth.signIn(username, password)
+      .then((user) => {
+        if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
+          setLoggedIn(true);
+          setUser(user);
+          navigate("/changepassword");
+        } else {
+          setLoggedIn(true);
+          setUser(user);
+          navigate("/");
+        }
+      })
+      .catch((error) => {
+        error && setShowError(true);
+      });
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.form}>
+        <p className="sub-header" style={{ opacity: showError ? "1" : "0" }}>
+          Incorrect username or password
+        </p>
         <p className="paragraph">Username</p>
-        <input type="text" onChange={(e) => setUsername(e.target.value)} />
+        <input
+          type="text"
+          onChange={(e) => {
+            setUsername(e.target.value);
+            setShowError(false);
+          }}
+        />
         <p className="paragraph">Password</p>
         <input
           type="password"
           onKeyDown={(e) => (e.key === "Enter" ? login() : null)}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setShowError(false);
+          }}
         />
         <button className="button" onClick={login}>
           Login

@@ -1,14 +1,11 @@
 import styles from "./FleetPage.module.css";
 
-import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import Data from "../../Context/Context";
 import { Vehicles } from "../../Data/Vehicles";
-import { Landrover } from "../../Assets/SVG/Landrover";
-import { MAN } from "../../Assets/SVG/Man";
-import { TRL } from "../../Assets/SVG/Trl";
-import { FEPS } from "../../Assets/SVG/FEPS";
+import { Card } from "../../Components/Card/Card";
 
 export const FleetPage = () => {
   const { user } = useContext(Data);
@@ -32,7 +29,13 @@ export const FleetPage = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1 className="header">Welcome {user.username}</h1>
       <p className="sub-header">
         Select a vehicle from the list and you
@@ -74,37 +77,13 @@ export const FleetPage = () => {
           FEPS ({feps})
         </button>
       </div>
-      <ul className={styles.cardContainer}>
+      <ul className={styles.cardContainer} layout="position">
         {Vehicles.filter(
           (vrn) => vrn.vrn.includes(filter) || vrn.type.includes(filter)
         ).map((vehicle, index) => {
-          return (
-            <li key={index} className={styles.card}>
-              <Link to={`/${vehicle.vrn}`}>
-                <div className={styles.wrapper}>
-                  <p className={`${styles.label} paragraph`}>VRN:</p>
-                  <h2 className={`${styles.info} sub-header`}>{vehicle.vrn}</h2>
-                  <div className={styles.imageContainer}>
-                    <p className={`${styles.infoText} paragraph`}>
-                      {vehicle.info}
-                    </p>
-                    {vehicle.type === "LANDROVER" ? (
-                      <Landrover />
-                    ) : vehicle.type === "MAN" ? (
-                      <MAN />
-                    ) : vehicle.type === "TRL" ? (
-                      <TRL />
-                    ) : vehicle.type === "FEPS" ? (
-                      <FEPS />
-                    ) : null}
-                  </div>
-                  <p className="paragraph">{vehicle.desc}</p>
-                </div>
-              </Link>
-            </li>
-          );
+          return <Card data={vehicle} key={index} />;
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 };

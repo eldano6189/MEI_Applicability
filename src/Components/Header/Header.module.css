@@ -1,10 +1,21 @@
 header {
   display: flex;
   width: 100%;
-  padding: 1em;
+  padding: 0 1em;
+  flex-direction: column;
 }
 
-header > div {
+.containerToggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.containerHeader {
+  display: flex;
+}
+
+.containerHeader > div {
   flex: 1 1;
 }
 
@@ -55,7 +66,7 @@ header > div {
 }
 
 @media screen and (max-width: 800px) {
-  header {
+  .containerHeader {
     flex-direction: column;
   }
 

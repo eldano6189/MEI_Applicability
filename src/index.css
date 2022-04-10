@@ -15,18 +15,30 @@ html {
   height: -webkit-fill-available;
 }
 
-:root {
+.dark-mode {
   --bc1: 217, 10%, 15%;
   --fc1: 0, 0%, 93%;
   --fc2: 145, 61%, 45%;
   --svg: 216, 18%, 5%;
   --shadow1: 217, 10%, 17%;
-  --shadow2: 217, 10%, 13%;
+  --shadow2: 217, 10%, 10%;
   --shadow: 6px 6px 16px 0 hsl(var(--shadow2)),
     -6px -6px 16px 0 hsl(var(--shadow1));
   --shadow-hover: 6px 6px 16px 0 hsl(var(--shadow1)),
     -6px -6px 16px 0 hsl(var(--shadow2));
-  --test: hsl(143, 38%, 30%);
+}
+
+.light-mode {
+  --bc1: 0, 0%, 88%;
+  --fc1: 0, 0%, 0%;
+  --fc2: 145, 61%, 45%;
+  --svg: 216, 7%, 50%;
+  --shadow1: 0, 0%, 100%;
+  --shadow2: 0, 0%, 75%;
+  --shadow: 6px 6px 16px 0 hsl(var(--shadow2)),
+    -6px -6px 16px 0 hsl(var(--shadow1));
+  --shadow-hover: 6px 6px 16px 0 hsl(var(--shadow1)),
+    -6px -6px 16px 0 hsl(var(--shadow2));
 }
 
 li,
@@ -41,15 +53,6 @@ svg {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: hsl(var(--bc1));
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--fc2));
-  border-radius: 20px;
+  width: 0px;
+  height: 0px;
 }

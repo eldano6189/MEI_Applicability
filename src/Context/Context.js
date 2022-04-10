@@ -6,6 +6,7 @@ const Data = createContext();
 export const DataContext = ({ children }) => {
   const [user, setUser] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [theme, setTheme] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -24,8 +25,10 @@ export const DataContext = ({ children }) => {
       value={{
         loggedIn,
         setLoggedIn,
-        setUser,
         user,
+        setUser,
+        theme,
+        setTheme,
       }}
     >
       {children}

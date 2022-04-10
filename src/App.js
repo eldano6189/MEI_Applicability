@@ -2,9 +2,10 @@ import "./App.css";
 
 import Amplify from "aws-amplify";
 import { useContext } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import VehData from "./Context/Context";
+import Data from "./Context/Context";
 import { Vehicles } from "./Data/Vehicles";
 import awsmobile from "./aws-exports";
 
@@ -18,39 +19,42 @@ import { LoginPage } from "./Pages/Login-page/LoginPage";
 Amplify.configure(awsmobile);
 
 function App() {
-  const { loggedIn } = useContext(VehData);
+  const location = useLocation();
+  const { loggedIn, theme } = useContext(Data);
 
   return (
-    <div className="App">
+    <div className={`App ${theme ? "dark-mode" : "light-mode"}`}>
       <Header />
       <ScrollTop>
-        <Routes>
-          {loggedIn && (
-            <>
-              <Route exact path="/" element={<FleetPage />} />
-              <Route
-                exact
-                path="/changepassword"
-                element={<ChangePassword />}
-              />
-              {Vehicles.map((vehicle, index) => {
-                return (
-                  <Route
-                    key={index}
-                    exact
-                    path={`/${vehicle.vrn}`}
-                    element={<VehiclePage data={vehicle} authed={true} />}
-                  />
-                );
-              })}
-            </>
-          )}
-          {!loggedIn && <Route exact path="/login" element={<LoginPage />} />}
-          <Route
-            path="*"
-            element={<Navigate replace to={loggedIn ? "/" : "/login"} />}
-          />
-        </Routes>
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.pathname}>
+            {loggedIn && (
+              <>
+                <Route exact path="/" element={<FleetPage />} />
+                <Route
+                  exact
+                  path="/changepassword"
+                  element={<ChangePassword />}
+                />
+                {Vehicles.map((vehicle, index) => {
+                  return (
+                    <Route
+                      key={index}
+                      exact
+                      path={`/${vehicle.vrn}`}
+                      element={<VehiclePage data={vehicle} authed={true} />}
+                    />
+                  );
+                })}
+              </>
+            )}
+            {!loggedIn && <Route exact path="/login" element={<LoginPage />} />}
+            <Route
+              path="*"
+              element={<Navigate replace to={loggedIn ? "/" : "/login"} />}
+            />
+          </Routes>
+        </AnimatePresence>
       </ScrollTop>
     </div>
   );
