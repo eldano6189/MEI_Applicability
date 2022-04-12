@@ -36,3 +36,19 @@
   border-radius: 0.2em 0.2em 0 0;
   text-transform: uppercase;
 }
+
+/* width */
+.container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: hsl(var(--fc1), 5%);
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: hsl(var(--fc2));
+}
