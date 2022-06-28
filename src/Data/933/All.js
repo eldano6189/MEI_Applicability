@@ -221,7 +221,7 @@ export const All = [
   },
   {
     im: "45",
-    desc: "Vehicle Jacks",
+    desc: "Vehicle Jacks (RDI On JAMES)",
     link: "/",
   },
   {

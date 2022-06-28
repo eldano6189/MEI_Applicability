@@ -301,7 +301,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "DSTAN",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","N/A","N/A","Y","N/A","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"],
   },
@@ -321,7 +321,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "DSTAN",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","N/A","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"],
   },
@@ -341,7 +341,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","N/A","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
     ],
@@ -362,7 +362,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","N/A","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
     ],
@@ -383,7 +383,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "TCV",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","Y","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"],
   },
@@ -403,7 +403,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "TCV",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","Y","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"],
   },
@@ -423,7 +423,7 @@ export const Vehicles = [
     ulw: "9800",
     info: "WINCH",
     // prettier-ignore
-    mot: ["Y","N/A","Y","N/A","Y","Y","EX","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
+    mot: ["Y","N/A","Y","N/A","Y","Y","Y","Y","EX","Y","Y","Y","N/A","EX","Y","Y","Y","Y","Y","Y","N/A","Y","Y","N/A","Y","EX","Y","Y","N/A","Y","N/A","N/A","EX","Y","N/A","N/A","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y"],
     // prettier-ignore
     operational: ["Y","Y","Y","Y","N/A","N/A","Y","Y","N/A","Y","Y","N/A","Y","N/A","Y","Y","N/A","N/A","N/A","Y","Y","Y","N/A","N/A","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"],
   },
